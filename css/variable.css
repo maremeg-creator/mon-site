@@ -1,0 +1,16 @@
+:root {
+    /* Couleurs principales */
+    --couleur-principale: #ac89db;
+    --couleur-secondaire: #000000;
+    --couleur-texte: #333;
+    --couleur-lien: rgb(20, 17, 17);
+    --couleur-hover: #d944b1;
+
+    /* Fonds */
+    --fond-clair: #ffffff;
+    --fond-carte: #f5f5f5;
+
+    /* Bordures et ombres */
+    --rayon-bordure: 10px;
+    --ombre-legere: 0 2px 8px rgba(0,0,0,0.1);
+}
