@@ -1,27 +1,10 @@
-/* ================================
-   VARIABLES CSS
-   ================================ */
-:root {
-    /* Couleurs principales */
-    --couleur-principale: #ac89db;
-    --couleur-secondaire: #000000;
-    --couleur-texte: #333;
-    --couleur-lien: rgb(20, 17, 17);
-    --couleur-hover: #d944b1;
-
-    /* Fonds */
-    --fond-clair: #ffffff;
-    --fond-carte: #f5f5f5;
-
-    /* Bordures et ombres */
-    --rayon-bordure: 10px;
-    --ombre-legere: 0 2px 8px rgba(0,0,0,0.1);
-}
+/* Import des variables */
+@import url('variable.css');
 
 /* ================================
    TITRES
    ================================ */
-.titre{
+.titre {
     text-align: center;
     color: white;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
@@ -30,7 +13,7 @@
 /* ================================
    MABOX (menu)
    ================================ */
-.mabox{
+.mabox {
     background-color: rgb(202, 189, 220);
     padding: 9px;
 }
@@ -48,12 +31,11 @@ nav ul {
 nav a {
     color: var(--couleur-lien);
     text-decoration: none;   /* supprime le soulignement */
-   
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 nav a:hover {
     color: var(--couleur-hover);
-    transform: scale(4.1);
 }
 
 /* MENU RESPONSIVE */
@@ -68,28 +50,28 @@ nav a:hover {
    BOUTONS
    ================================ */
 .btn-projets {
-    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    background: linear-gradient(135deg, #8b5cf6, #6366f1); /* tu peux mettre en variable si souhaité */
     color: white;
     padding: 12px 28px;
     font-weight: bold;
     border-radius: 30px;
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    display: inline-block; /* permet au margin d’être bien pris en compte */
-    margin: 20px 0;        /* espace au-dessus et en dessous */
+    display: inline-block;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .btn-projets:hover {
-    transform: scale(1.1);              /* le bouton grossit légèrement */
-    
-                   /* montre que c'est cliquable */
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    cursor: pointer;
 }
 
 /* ================================
    PHOTO DE PROFIL
    ================================ */
-.photo{
+.photo {
     width: 120px;
     height: 150px;
     object-fit: cover;
@@ -102,7 +84,7 @@ nav a:hover {
 /* ================================
    HEADER
    ================================ */
-header{
+header {
     text-align: center;
     margin-bottom: 100px;
     background: linear-gradient(90deg, var(--couleur-principale), var(--couleur-secondaire));
@@ -112,7 +94,7 @@ header{
 /* ================================
    TITRES H2
    ================================ */
-h2{ 
+h2 { 
     color: rgb(136, 136, 208);
 }
 
@@ -141,11 +123,11 @@ footer a:hover {
 /* ================================
    BODY
    ================================ */
-body{
+body {
     font-size: 16px;        
     line-height: 1.6;      
     color: var(--couleur-texte);            
-    background-color: var(--fond-clair); 
+    background-color: var(--fond-clair);
 }
 
 /* ================================
@@ -159,25 +141,25 @@ body{
     max-width: 1200px;        
     width: 85%;                    
     background-color: var(--fond-clair);     
-    box-shadow: var(--ombre-legere); 
+    box-shadow: var(--ombre-legere);
 }
 
 /* ================================
    ICONES
    ================================ */
-.lang::before{
+.lang::before {
     content: "💻";
     font-size: 1.2em;
 }
-.ad::before{
+.ad::before {
     content: "📍";
     font-size: 1.2em;
 }
-.mail::before{
+.mail::before {
     content: "📧";
     font-size: 1.2em;
 }
-.tel::before{
+.tel::before {
     content: "📞";
     font-size: 1.2em;
 }
@@ -185,21 +167,19 @@ body{
 /* ================================
    TEXTE
    ================================ */
-.humaine{
+.humaine {
     text-align: justify;
 }
 
 /* ================================
    GRID COMPETENCES
    ================================ */
-/* PAR DEFAUT : ORDINATEUR */
 .grid-competences {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 cadres côte à côte */
     gap: 20px;
 }
 
-/* ADAPTATION TELEPHONE */
 @media screen and (max-width: 768px) {
     .grid-competences {
         grid-template-columns: 1fr; /* 1 cadre par ligne */
@@ -237,7 +217,7 @@ figure img {
     width: 130px;
     height: 130px;
     border-radius: 10px;
-    margin: auto; /* centre l'image */
+    margin: auto;
 }
 
 /* Style des titres sous les images */
